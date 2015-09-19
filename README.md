@@ -9,7 +9,7 @@ Most of the relational database fork related code is located in [DBIStoreContrib
 The fork runs with Japanese text with no problems.
 
 # Data
-To see the SQL statements, just grep the DBIStoreContrib directory for this string, _$selectStatement_ .  To see a schema, check out [schema.pl](https://github.com/favioflamingo/wiki/blob/master/static/var/lib/foswiki/data/schema.pl).
+To see the SQL statements, just grep the DBIStoreContrib directory for this string, _$selectStatement_ .  To see a schema, check out [schema.pl](https://github.com/favioflamingo/wiki/blob/master/static/var/lib/foswiki/schema.sql).
 
 
 To start with, take a look at [the Meta Topic object](https://github.com/favioflamingo/wiki/blob/master/perl/lib/Foswiki/Meta.pm).  To create a brand new object, the user enters the following information:
