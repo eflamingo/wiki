@@ -1,0 +1,8 @@
+
+
+#VarVAR
+---+++ VAR{"NAME" web="Web"} -- get a preference value from another web 
+   * Syntax: =%<nop>VAR{"NAME" web="Web"}%=
+   * Example: To get =%<nop>WEBBGCOLOR%= of the Main web write =%<nop>VAR{"WEBBGCOLOR" web="Main"}%=, which expands to =%VAR{"WEBBGCOLOR" web="Main"}%=
+   * Related: [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarWEBPREFSTOPIC][WEBPREFSTOPIC]]
+

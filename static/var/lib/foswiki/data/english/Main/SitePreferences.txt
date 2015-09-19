@@ -1,0 +1,62 @@
+---+!! %TOPIC%
+
+%ICON{"help"}% 
+%MAKETEXT{
+   "Foswiki's default preferences are located in [_1], however settings defined here have override priority and should be used for local customisations."
+   args="[[System.DefaultPreferences]]"
+}%
+
+%TOC%
+
+<sticky>
+<div class="%IF{"not context PreferencesPluginEnabled" then="foswikiHidden"}%">
+%EDITPREFERENCES{"%SYSTEMWEB%.DefaultPreferencesForm"}%
+</div>
+</sticky>
+
+---++ Appearance
+
+Customize logo and tooltip texts:
+
+   * Set WIKILOGOIMG = %PUBURL%/%WEB%/%TOPIC%/flamingo-favicon.ico
+   * Set WIKILOGOALT = E-Flamingo
+   * Set WIKILOGOURL = %SCRIPTURL{"view"}%/Main/%HOMETOPIC%
+
+Give your site a specific name:
+
+   * Set WIKITOOLNAME = Foswiki
+      
+Customize your [[http://en.wikipedia.org/wiki/Favicon][favicon]]:
+
+   * Set FAVICON = %PUBURL%/%WEB%/%TOPIC%/flamingo-favicon.ico
+
+Customize your top bar background image and color
+   * Set WEBHEADERART = %PUBURLPATH%/%SYSTEMWEB%/PatternSkin/header5.gif
+   * Set WEBHEADERBGCOLOR = #ffffff
+      
+Set BatchUploadPlugin default:
+   * Set BATCHUPLOADPLUGIN_ENABLED = 0
+
+Skin settings, including icons:
+   * Set SKIN = pattern
+
+Get rid of autolinking: 
+   * Set NOAUTOLINK = on
+
+Set the Default Dial Plans
+   * Set INTERNAL_DIALPLAN = Main.InternalDialPlan
+   * Set EXTERNAL_DIALPLAN = Main.ExternalDialPlan
+   * Set LOCAL_COUNTRY = Japan
+---++ Finalisation
+=FINALPREFERENCES= locks site-level preferences that are *not* allowed to be overridden by [[%WEBPREFSTOPIC%]] or user preferences:
+
+   * Set FINALPREFERENCES = ATTACHFILESIZELIMIT, PREVIEWBGIMAGE, WIKITOOLNAME, WIKIHOMEURL, ALLOWROOTCHANGE, DENYROOTCHANGE, USERSWEB, SYSTEMWEB, DOCWEB, INTERNAL_DIALPLAN, EXTERNAL_DIALPLAN
+
+<!-- Keep this as a security measure:
+   * Set ALLOWTOPICCHANGE = Main.AdminGroup
+   * Set ALLOWTOPICRENAME = Main.AdminGroup
+-->
+
+---
+| *Child Topics:* | %SEARCH{"parent.name = '%WEB%.%TOPIC%'" type="query" nonoise="on" format="[[$web.$topic]]" separator=", " }% |
+

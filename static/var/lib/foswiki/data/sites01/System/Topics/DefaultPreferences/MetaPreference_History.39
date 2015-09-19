@@ -1,0 +1,3 @@
+Set
+MAILTHISTOPIC
+<a href="mailto:?subject=%BASETOPIC%&amp;body=%TOPICURL%">%MAILTHISTOPICTEXT%</a>

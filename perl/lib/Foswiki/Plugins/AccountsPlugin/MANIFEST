@@ -1,0 +1,14 @@
+lib/Foswiki/Plugins/AccountsPlugin/Credits.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountsPlugin/Sites.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountsPlugin/DiDs.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountsPlugin/Users.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountsPlugin/Orders.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountsPlugin/Products.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountsPlugin/Contracts.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountsPlugin/Dwolla.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountsPlugin/iCall.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountsPlugin.pm 0644 Plugin Perl module
+lib/Foswiki/UI/Accounts.pm 0644 UI handler
+bin/accounts 0644 new cgi script
+lib/Foswiki/Plugins/AccountsPlugin/Config.spec 0644 Congfig
+

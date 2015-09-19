@@ -1,0 +1,306 @@
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1275898567" format="1.1" reprev="3" version="3"}%
+<!--
+
+   PLEASE DO NOT EDIT THIS TOPIC
+
+   It is automatically generated from the subversion repository, and any changes
+   you make will simply be overwritten the next time a release is generated.
+
+   Instead, you could check your fix in, raise a bug in the Bugs web, or mail the author.
+-->
+---+!! <nop>%TOPIC%
+%TOC%
+<table style="float:right">
+<tr>
+  <td><img src="%ATTACHURLPATH%/wikiringlogo40x40.png"></td>
+  <td><a href="http://wikiring.com" title="Make your Wiki ring!" style="text-decoration:none">
+      Powered by <br /> <nop>WikiRing Consultants </a>
+  </td>
+</tr>
+</table>
+---++ Description
+This plugin allows to substitute and extract information from content by
+using regular expressions. There are three different types of new functions:
+   1 FORMATLIST: maniplulate a list of items; it is highly configurable to 
+     define what constitutes a list and how to extract items from it
+   1 SUBST, STARTSUBST/STOPSUBST: substiture a pattern in a chunk of text
+   1 EXTRACT, STARTEXTRACT/STOPEXTRACT: extract a pattern from a text
+While the START-STOP versions of SUBST and EXTRACT work on inline text,
+the normal versions process a source topic before including it into the current one.
+
+---++ Syntax Rules
+---+++ SUBST
+*Syntax*: =%<nop>SUBST{topic="..." ...}%= 
+
+insert a topic by processing its content.
+
+   * =topic="..."=: name of the topic text to be processed 
+   * =text="..."=: text to be processed (has got higher precedence than 'topic')
+   * =pattern="..."=: pattern to be extracted or substituted 
+   * =format="..."=: format expression or pattern substitute 
+   * =header="..."=: header string prepended to output
+   * =footer="..."=: footer string appended to output
+   * =limit="&lt;n>"= maximum number of occurences to extract or substitute counted from the 
+     start of the text (defaults to =100000= aka all hits) 
+   * =skip="&lt;n>"= skip the first n occurences
+   * =exclude="..."=: skip occurences that match this regular expression
+   * =include="..."=: skip occurences that don't match this regular expression
+   * sort="on,off,alpha,num" order of the formatted items (default "off")
+   * =expand="on,off"=: toggle expansion of markup before filtering
+     (defaults to =on=) 
+
+---+++ STARTSUBST, STOPSUBST
+*Syntax*:
+<verbatim>
+%STARTSUBST{...}% 
+... 
+%STOPSUBST%
+</verbatim>
+
+substitute text given inline. see [[#SUBST][SUBST]].
+
+---+++ EXTRACT
+*Syntax*: =%<nop>EXTRACT{topic="..."  ...}%= 
+
+extract text from a topic. see [[#SUBST][SUBST]].
+
+---+++ STARTEXTRACT, STOPEXTRACT
+*Syntax*:
+<verbatim>
+%STARTEXTRACT{...}% 
+... 
+%STOPEXTRACT%
+</verbatim>
+
+extract content given inline. see [[#SUBST][SUBST]].
+
+---+++ FORMATLIST
+*Syntax*: =%<nop>FORMATLIST{"&lt;list>" ...}%=
+
+formats a list of items. The &lt;list> argument is separated into items by using
+a split expression; each item is matched agains a pattern and then formatted
+using a format string while being separated by a separator string; the result is
+prepended with a header and appended with a footer in case the list is not empty.
+   * &lt;list>: the list 
+   * tokenize="...": regex to tokenize the list before spliting it up, tokens are inserted back again after the split stage has been passed
+   * split="...": the split expression (default ",")
+   * pattern="...": pattern applied to each item (default "\s(.*)\s")
+   * format="...": the format string for each item (default "$1")
+   * header="...": header string
+   * footer="...": footer string
+   * separator="...": string to be inserted between list items
+   * null="...": the format string to render the empty list
+   * limit="...": max number of items to be taken out of the list (default "-1")
+   * skip="...": number of list items to skip, not adding them to the result
+   * sort="on,off,alpha,num,nocase" order of the formatted items (default "off")
+   * reverse="on,off": reverse the sortion of the list
+   * unique="on,off": remove dupplicates from the list
+   * exclude="...": remove list items that match this regular expression
+   * include="...": remove list items that don't match this regular expression
+   * selection="...": regular expression that a list item must match to be "selected"; if this matches the =$marker= is inserted
+   * marker="...": string to be inserted when the =selection= regex matches; this will be inserted at the position =$marker= as
+     indicated in =format= .
+   * map="key1=value1,key2=value2, ...": this establishes a key-value hash available via the =$map()= variable.
+
+The pattern string shall group matching substrings in the list item to which you can refer to by 
+using $1, $2, ... in the format string. Any format string (=format=, =header=, =footer=) may
+contain variables =$percnt$=, =$nop=, =$dollar= and =$n=. The variable
+=$index= referse to the position number within the list being formatted; using =$count= in the
+footer or header argument refers to the total number of list elements; =$marker= is set if
+the =selection= regular expression matches the current item. The =$map(key)= macro returns the value for "key"
+as specified in the =map= argument.
+
+---+++ MAKEINDEX
+*Syntax*: =%<nop>MAKEINDEX{"&lt;list>" ...}%=
+
+formats a list into a multi-column index like in <nop>MediaWiki's category topcis.
+MAKEINDEX insert capitals as headlines to groups of sorted items. It will try to balance all
+columns equally, and keep track of breaks to prevent "schusterkinder", that is avoid 
+isolated headlines at the bottom of a column.
+
+parameters:
+   * &lt;list>: the list of items
+   * split="...": the split expression to separate the &lt;list> into items (default ",")
+   * pattern="...": pattern applied to each item (default "(.*)")
+   * cols="...": maximum number of cols to split the list into
+   * format="...": format of each list item (default "$item")
+   * sort="on,off,alpha,num,nocase": sort the list (default "on")
+   * unique="on/off": removed duplicates (default "off")
+   * exclude="...": pattern to check against items in the list to be excluded
+   * include="...": pattern to check against items in the list to be included
+   * reverse="on/off": reverse the list (default "off")
+   * header="...": format string to prepend to the result
+   * footer="..." format string to be appended to the result
+
+Like in FORMATLIST the =format= parameter can make use of =$1=, =$2=, ... variables
+to match the groupings defined in the =pattern= argument (like in =pattern="(.*);(.*);(.*)"=) .
+The first matched grouping $1 will be used as the $item to sort the list.
+
+In addition =header= and =footer= might contain the =$anchors= variable which will expand
+to a navigation to jump to the groups within the index.
+
+---++ Examples
+
+---+++ EXTRACT Example 1: convert table into text
+One of the uses of this plugin is to extract data from tables, which is useful for creating "database-like" wiki applications where data is stored in foswiki tables. While it is certainly possible to do that without this plugin the plugin makes these requests easier to create and maintain. Note, however, that best practice is to store database-like
+information using System.DataForms, so that you don't need to parse the format of the data to extract its records repeatedly.
+
+*The table:*
+|  *Pos* | *Description* | *Hours* | 
+|  1 | onsite troubleshooting |  3 | 
+|  2 | normalizing data to new format |  10 |
+|  3 | testing server performance |  5 |
+
+*You type:*
+
+<verbatim class="tml">
+%EXTRACT{topic="%TOPIC%" expand="off" 
+  pattern="^\|\s\s(.*?)\s*\|\s*(.*?)\s*\|\s*(.*?)\s*\|" 
+  format="   * it took $3 hours $2$n"
+  skip="1"
+}%
+</verbatim>
+
+*Expected result (simulated):*
+
+   * it took 3 hours onsite troubleshooting 
+   * it took 10 hours normalizing data to new format 
+   * it took 5 hours testing server performance 
+
+*Actual result (this site):*
+
+%EXTRACT{topic="%TOPIC%" expand="off" 
+   pattern="^\|\s\s(.*?)\s*\|\s*(.*?)\s*\|\s*(.*?)\s*\|" 
+   format="   * it took $3 hours $2$n"
+   skip="1"
+}%
+
+---+++ EXTRACT Example 2: convert text into table
+Use CSS tags to format text comments as a tabular data (e.g., to allow sorting).
+
+*The comments:*
+<div class="text"><div class="comment">
+This is the first comment.
+</div><div class="posted">
+-- Michael Daum on 22 Aug 2005
+</div></div>
+
+<div class="text"><div class="comment">
+This is the second comment.
+</div><div class="posted">
+-- Michael Daum on 22 Aug 2005
+</div></div>
+
+*You type:*
+
+<verbatim class="tml">
+%EXTRACT{
+   topic="%TOPIC%" expand="off"
+   pattern=".div class=\"text\">.*?[\r\n]+(.*?)[\r\n]+(?:.*?[\r\n]+)+?-- (.*?) on (.*?)[\r\n]+"
+   format="| $3 | $2 | $1 ... |$n" header="|*Date*|*Author*|*Headline*|$n"
+}%</verbatim>
+
+*Expected result (simulated):*
+
+|*Date*|*Author*|*Headline*|
+|22 Aug 2005 | Michael Daum | This is the first comment. ... |
+|22 Aug 2005 | Michael Daum | This is the second comment. ... |
+
+*Actual result (this site):*
+
+%EXTRACT{
+  topic="%TOPIC%" expand="off"
+  pattern=".div class=\"text\">.*?[\r\n]+(.*?)[\r\n]+(?:.*?[\r\n]+)+?-- (.*?) on (.*?)[\r\n]+"
+  format="| $3 | $2 | $1 ... |$n" header="|*Date*|*Author*|*Headline*|$n"
+}%
+
+---+++ MAKEINDEX example 1: creating an index from a chunk of text
+compare with [[http://en.wikipedia.org/wiki/Category:Philosophy_articles_needing_attention][Philosophy articles needing attention]]
+
+%MAKEINDEX{
+  "Absolute (philosophy), Accident (philosophy), Actualism, Talk:Adam Weishaupt, Alphabet of human thought, Alterity, Analytic philosophy, Analytic-synthetic distinction, Apologism, Bundle theory, Categories (Stoic), Causal chain, Causality, Coherentism, Conscience, Context principle, Contextualism, Cosmology, De dicto and de re, Dialectical monism, Difference (philosophy), Direct reference theory, Discourse ethics, Dualism, Emergentism, Essence, Ethical naturalism, Exemplification, Existentialism, Fatalism, French materialism, Futilitarianism, Hermeneutics, Hypokeimenon, Identity and change, Idolon tribus, Immanent evaluation, Indeterminacy (Philosophy), Individual, Inherence, Kennisbank Filosofie Nederland, Lazy Reason, Mike Lesser, Libertarianism (metaphysics), Logicism, Mad pain and Martian pain, Materialism, Meaning of life, Metakosmia, Metaphysical naturalism, Milesian school, Mind, Monism, Moral imperative, Multiplicity (philosophy), Mystical philosophy of antiquity, Nature (philosophy), Neomodernism, New England Transcendentalists, Nominalism, Non-archimedean time, Non-rigid designator, Object (philosophy), Ontic, Ontological reductionism, Phenomenology, Philosophical realism, Philosophical skepticism, Philosophy, Pluralism (philosophy), Post-structuralism, Postmodern philosophy, Preferentialism Present (time), Problem of universals, Process philosophy, Rational Animal, Rationalist movement, Relativism, Self (philosophy), Solipsism, Species (metaphysics), Specters of Marx, Substance theory, Talk:The Art of Being Right, Truth-value link, Universal (metaphysics), Utilitarianism, Value judgment, World riddle" 
+  cols="3"
+  format="[[http://en.wikipedia.org/wiki/$item][$item]]"
+  header="$anchors"
+}%
+
+---+++ MAKEINDEX example 2: creating an index for a search result
+%MAKEINDEX{
+   "%SEARCH{".*" 
+      web="Main"
+      scope="topic"
+      type="regex"
+      limit="30"
+      nonoise="on"
+      format="$topic;$web;$wikiusername;$date"
+      separator="$n"
+      excludetopic="CGI*,*Plugin"
+    }%" 
+   cols="2"
+   split="\n"
+   pattern="(.*);(.*);(.*);(.*)"
+   format="<div class='indexItem'>
+       [[$2.$1][$1]] 
+       <div class='foswikiGrayText'>$4 - $3</div>
+     </div>"
+}% 
+<style type="text/css">
+.indexItem {
+  margin:0px 10px 10px 0px;
+}
+</style>
+
+---++ Plugin Installation Instructions
+%$INSTALL_INSTRUCTIONS%
+
+---++ Plugin Info
+<!-- 
+   * Set SHORTDESCRIPTION = Substitute and extract information from content by using regular expressions
+-->
+|  Plugin Author: | Michael Daum |
+|  Copyright &copy;: | 2005-2011, Michael Daum http://michaeldaumconsulting.com |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Release: | %$RELEASE% |
+|  Version: | %$VERSION% |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  06 Apr 2011: | fixed SUBST to removing everything after the last match |
+|  23 Jul 2010: | fixed wrapper for non-official api call to getAnchorName on foswiki-1.1 |
+|  07 Jun 2010: | fixed expanding standard escapes ($n, $percent, ...); improved examples in docu |
+|  12 Feb 2010: | ease =tokenize=; forward compatibility for newer foswikis |
+|  17 Nov 2009: | added =tokenize= pattern for FORMATLIST; \
+                  fixed potential deep recursion in SUBST/EXTRACT |
+|  14 Sep 2009: | added =include= counterpart to already existing =exclude= params; \
+                  fixed SUBST not to forget about the non-matching tail of a char sequence |
+|  17 Apr 2009: | converted to foswiki, added numerical sorting to MAKETEXT |
+|  08 Oct 2008: | added =$anchors= to MAKEINDEX (by Dirk Zimoch); \
+                  added =nocase= option to FORMATLIST (by Dirk Zimoch); \
+                  fixed null/empty string match in FORMATLIST |
+|  20 Aug 2008: | added =selection= and =marker= to FORMATLIST, similar in use as %SYSTEMWEB%.VarWEBLIST |
+|  03 Jul 2008: | sorting a list _before_, not _after_, formatting it in FORMATLIST |
+|  08 May 2008: | added 'text' parameter to SUBST and EXTRACT; \
+                  fixed SUBST as it was pretty useless before |
+|  07 Dec 2007: | added MAKEINDEX, added lazy compilation |
+|  14 Sep 2007: | added sorting for EXTRACT and SUBST |
+|  02 May 2007: | using registerTagHandler() as far as possible; \
+                  enhanced parameters to EXCTRACT and SUBST |
+|  05 Feb 2007: | fixed escapes in format strings; \
+                  added better default value for max number of hits to prevent deep recursions \
+                  on bad regexpressions |
+|  22 Jan 2007: | fixed SUBST, added skip parameter to FORMATLIST |
+|  18 Dec 2006: | using registerTagHandler for FORMATLIST |
+|  13 Oct 2006: | fixed =limit= parameter in FORMATLIST |
+|  31 Aug 2006: | added NO_PREFS_IN_TOPIC |
+|  15 Aug 2006: | added =use strict;= and fixed revealed errors |
+|  14 Feb 2006: | moved in FORMATLIST from the Foswiki:Extensions/NatSkinPlugin;\
+                  added escape variables to format strings |
+|  06 Dec 2005: | fixed SUBST not to cut off the rest of the text |
+|  09 Nov 2005: | fixed deep recursion using =expand="on"= |
+|  22 Aug 2005: | Initial version; added =expand= toggle |
+|  Dependency: | $Foswiki::Plugins::VERSION 1.024 |
+|  CPAN Dependencies: | none |
+|  Other Dependencies: | none |
+|  Perl Version: | 5.005 |
+|  Plugin Home: | Foswiki:Extensions/%TOPIC% |
+|  Support: | Foswiki:Support/%TOPIC% |
+
+%META:FILEATTACHMENT{name="wikiringlogo40x40.png" attr="h" autoattached="1" comment="" date="1189788323" path="wikiringlogo40x40.png" size="2571" user="ProjectContributor" version="1"}%

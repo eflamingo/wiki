@@ -1,0 +1,8 @@
+
+
+#VarWIKITOOLNAME
+---+++ WIKITOOLNAME -- name of your site
+   * Syntax: =%<nop>WIKITOOLNAME%=
+   * Expands to: =%WIKITOOLNAME%=
+   * Related: [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarWIKIHOMEURL][WIKIHOMEURL]], [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarWIKIVERSION][WIKIVERSION]]
+

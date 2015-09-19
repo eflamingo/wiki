@@ -1,0 +1,8 @@
+lib/Foswiki/Plugins/AccountingPlugin/Transactions.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountingPlugin/Ledger.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountingPlugin/Splits.pm 0644 Plugin Perl module
+lib/Foswiki/Plugins/AccountingPlugin.pm 0644 Plugin Perl module
+lib/Foswiki/UI/Accounting.pm 0644 UI handler
+bin/accounting 0644 new cgi script
+lib/Foswiki/Plugins/AccountingPlugin/Config.spec 0644 Congfig
+

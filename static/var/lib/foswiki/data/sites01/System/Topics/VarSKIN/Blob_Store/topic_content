@@ -1,0 +1,11 @@
+
+
+#VarSKIN
+---+++ SKIN -- current skin
+   * =%<nop>SKIN%= expands the skin search path. For instance, =SKIN= can be set to =catskin, bearskin=.
+   * The =SKIN= setting can be overridden using the URL parameter =skin=, such as =?skin=catskin,bearskin=
+   * You can also extend the existing skin path using covers - see [[System.VarCOVER.TOPICKEY][COVER]]
+   * Syntax: =%<nop>SKIN%=
+   * Expands to: =%SKIN%=
+   * See [[System.Skins.TOPICKEY]] for more information
+   * Related: [[System.SkinBrowser.TOPICKEY]]

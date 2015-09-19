@@ -1,0 +1,8 @@
+
+
+#VarNOTIFYTOPIC
+---+++ NOTIFYTOPIC -- name of the notify topic
+   * Syntax: =%<nop>NOTIFYTOPIC%=
+   * Expands to: =%NOTIFYTOPIC%=, renders as [[System.%NOTIFYTOPIC%.TOPICKEY]]
+   * Related: [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarHOMETOPIC][HOMETOPIC]], [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarSTATISTICSTOPIC][STATISTICSTOPIC]], [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarTOPIC][TOPIC]]
+

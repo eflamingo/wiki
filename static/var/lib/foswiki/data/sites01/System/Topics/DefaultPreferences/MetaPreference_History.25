@@ -1,0 +1,3 @@
+Set
+ATTACHEDFILELINKFORMAT
+\n   * [[%ATTACHURL%/$fileurl][$filename]]: $comment

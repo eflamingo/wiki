@@ -1,0 +1,8 @@
+
+
+#VarUSERSWEB
+---+++ USERSWEB -- name of users web
+   * The web containing individual user topics, Main.WikiGroups, and customised site-wide preferences.
+   * Syntax: =%<nop>USERSWEB%=
+   * Expands to: =Main=
+   * Related: [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarSYSTEMWEB][SYSTEMWEB]]

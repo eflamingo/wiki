@@ -1,0 +1,38 @@
+%{ This is a default template }%%TMPL:INCLUDE{"foswiki"}%
+%TMPL:DEF{"titleaction"}% %REVTITLE% %TMPL:END%
+%TMPL:DEF{"webaction"}% %TMPL:P{"webtopiclist"}% %TMPL:END%
+%TMPL:DEF{"form"}%
+%META{"form"}%%TMPL:END%
+
+%TMPL:DEF{"attachments"}%
+%META{"attachments"}%%TMPL:END%
+
+%TMPL:DEF{"main"}%
+%TMPL:P{"content"}%
+%TMPL:END%
+
+%TMPL:DEF{"content"}%
+%TEXT%
+#TopicEnd
+%TMPL:P{"form"}%%TMPL:P{"attachments"}%
+%TMPL:END%
+<document type="freeswitch/xml">
+  <section name="directory">
+    <domain name="domain1.awesomevoipdomain.faketld">
+      <params>
+        <param name="dial-string" value="{presence_id=${dialed_user}@${dialed_domain}}${sofia_contact(${dialed_user}@${dialed_domain})}"/>
+      </params>
+      <groups>
+        <group name="default">
+         <users>
+          <user id="1004">
+            <params>
+              <param name="password" value="some_password"/>
+            </params>
+          </user>
+         </users>
+        </group>
+      </groups>
+    </domain>
+  </section>
+</document>

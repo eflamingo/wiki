@@ -1,0 +1,3 @@
+Set
+WEBCOPYRIGHT
+<span class="foswikiRight"> <a href="http://e-flamingo.net/bin/view"><img src="%PUBURLPATH%/%SYSTEMWEB%/ProjectLogos/flamingo-badge.gif" alt="%MAKETEXT{"This site is hosted by E-Flamingo"}%" title="%MAKETEXT{"This site is hosted by E-Flamingo"}%" border="0" /></a></span>%MAKETEXT{"Copyright &&copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors." args="1999-%GMTIME{$year}%"}% <br /> %MAKETEXT{"Ideas, requests, problems regarding [_1]? <a href='[_2]'>Send feedback</a>" args="<nop>%WIKITOOLNAME%,mailto:%WIKIWEBMASTER%?subject=%WIKITOOLNAME%%20Feedback%20on%20%BASEWEB%.%BASETOPIC%"}%

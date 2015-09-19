@@ -1,0 +1,47 @@
+%INCLUDE{"%IF{"context can_login" then="%SYSTEMWEB%.WebLeftBarLogin" else="<nop>"}%" warn="off"}%
+
+   * *%MAKETEXT{"Toolbox"}%*
+   * %IF{"istopic 'Main.%WIKIUSERSTOPIC%'" else=" $percntICON{\"person\"}$percnt $percntMAKETEXT{\"Users\"}$percnt" then="[[$percntUSERSWEB$percnt.$percntWIKIUSERSTOPIC$percnt][ $percntICON{\"person\"}$percnt $percntMAKETEXT{\"Users\"}$percnt]]"}%
+   * [[Main.WikiGroups.TOPICKEY][ %ICON{"group"}% %MAKETEXT{"Groups"}%]]
+   * [[System.WebTopicList.TOPICKEY][ %ICON{"index"}% %MAKETEXT{"Index"}%]]
+   * [[%BASEWEB%.WebSearch][ %ICON{"searchtopic"}% %MAKETEXT{"Search"}%]]
+   * [[System.WebChanges.TOPICKEY][ %ICON{"changes"}% %MAKETEXT{"Changes"}%]]
+   * [[System.WebNotify.TOPICKEY][ %ICON{"notify"}% %MAKETEXT{"Notifications"}%]]
+   * [[System.WebRss.TOPICKEY][ %ICON{"feed"}% %MAKETEXT{"RSS Feed"}%]]
+   * [[System.WebStatistics.TOPICKEY][ %ICON{"statistics"}% %MAKETEXT{"Statistics"}%]]
+   * [[System.WebPreferences.TOPICKEY][ %ICON{"wrench"}% %MAKETEXT{"Preferences"}%]]
+
+   * <b>%MAKETEXT{"User Reference"}%</b>
+   * [[System.BeginnersStartHere.TOPICKEY]]
+   * [[System.TextFormattingRules.TOPICKEY]]
+   * [[System.Macros.TOPICKEY][Macros]]
+   * [[System.FormattedSearch.TOPICKEY]]
+   * [[System.QuerySearch.TOPICKEY]]
+   * [[System.DocumentGraphics.TOPICKEY]]
+   * [[System.SkinBrowser.TOPICKEY]]
+   * [[System.InstalledPlugins.TOPICKEY]]
+
+   * <b>%MAKETEXT{"Admin Maintenance"}%</b>
+   * [[System.ReferenceManual.TOPICKEY][Reference Manual]]
+   * [[System.AdminToolsCategory.TOPICKEY]]
+   * [[System.InterWikis.TOPICKEY]]
+   * [[System.ManagingWebs.TOPICKEY]]
+   * [[System.SiteTools.TOPICKEY]]
+   * [[%WIKIPREFSTOPIC%]]
+   * [[%WEBPREFSTOPIC%]]
+
+   * <b>%MAKETEXT{"Categories"}%</b>
+   * [[System.AdminDocumentationCategory.TOPICKEY][Admin Documentation]]
+   * [[System.AdminToolsCategory.TOPICKEY][Admin Tools]]
+   * [[System.DeveloperDocumentationCategory.TOPICKEY][Developer Doc]]
+   * [[System.UserDocumentationCategory.TOPICKEY][User Documentation]]
+   * [[System.UserToolsCategory.TOPICKEY][User Tools]]
+
+%INCLUDE{"System.WebLeftBarWebsList.TOPICKEY"}%
+
+
+<!--
+   * Set DENYTOPICVIEW = WikiGuest
+-->
+
+

@@ -1,0 +1,9 @@
+
+
+#VarCOVER
+---+++ COVER -- current skin cover
+   * =%<nop>COVER%= extends the skin search path. For instance, if [[System.VarSKIN.TOPICKEY][SKIN]] is set to =catskin, bearskin=, and =COVER= is set to =ruskin=, the skin search path becomes =ruskin, catskin, bearskin=.
+   * The =COVER= setting can be overridden using the URL parameter =cover=, such as =?cover=ruskin=
+   * Syntax: =%<nop>COVER%=
+   * Expands to: =%COVER%=
+   * See [[System.Skins.TOPICKEY]] for more information

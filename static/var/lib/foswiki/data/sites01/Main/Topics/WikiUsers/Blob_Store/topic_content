@@ -1,0 +1,16 @@
+---+ List of <nop>%WIKITOOLNAME% users
+
+Below is a list of users with accounts. If you want to edit topics or see protected areas of the site then you can get added to the list by registering: fill out the form in %SYSTEMWEB%.UserRegistration. 
+
+If you forget your password, %SYSTEMWEB%.ResetPassword will get a new one sent to you.
+
+
+---+ Users
+Need to put some kind of user search parameter here.
+
+---++ Active
+%SEARCH{"info.isA = 'user' AND info.web != 'Trash'"  type="query" nosearch="on" nototal="on" format="| [[$web.$topic][$topic]] | $percentSEARCH{\"link_to.name = '$topic' AND link_to.type = 'MEMBER' AND info.web !='Trash'\"  type=\"query\" nosearch=\"on\" nototal=\"on\" format=\"[[$dollarweb.$dollartopic][$dollartopic]]\" separator=\", \"}$percent |" header="| *User* | *User Groups* |"}%
+
+---++ Inactive
+%SEARCH{"info.isA = 'user' AND info.web= 'Trash'"  type="query" nosearch="on" nototal="on" format="| [[$web.$topic]] |" header="| *User Topic* |"}%
+

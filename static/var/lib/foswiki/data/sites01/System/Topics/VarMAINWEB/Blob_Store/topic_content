@@ -1,0 +1,5 @@
+
+
+#VarMAINWEB
+---+++ MAINWEB -- synonym for [[System.VarUSERSWEB.TOPICKEY][USERSWEB]]
+<blockquote class="foswikiHelp">%X% *Deprecated*. Please use =%<nop>USERSWEB%= instead.</blockquote>

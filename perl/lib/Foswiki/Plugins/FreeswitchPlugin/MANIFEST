@@ -1,0 +1,15 @@
+# Release manifest for FreeswitchPlugin
+
+lib/Foswiki/Plugins/FreeswitchPlugin.pm 0644 Perl module
+lib/Foswiki/Plugins/FreeswitchPlugin/Domain.pm 0644 Perl module
+lib/Foswiki/Plugins/FreeswitchPlugin/User.pm 0644 Perl module
+lib/Foswiki/Plugins/FreeswitchPlugin/Gateway.pm 0644 Perl module
+lib/Foswiki/Plugins/FreeswitchPlugin/Handler.pm 0644 Perl module
+lib/Foswiki/Plugins/FreeswitchPlugin/CDR.pm 0644 Perl module
+lib/Foswiki/Plugins/FreeswitchPlugin/Extension.pm 0644 Perl module
+lib/Foswiki/Plugins/FreeswitchPlugin/sofia-profile-external.xml 0644 Congfig
+lib/Foswiki/Plugins/FreeswitchPlugin/sofia-profile-internal.xml 0644 Congfig
+lib/Foswiki/Plugins/FreeswitchPlugin/sofia-profile.xml 0644 Congfig
+lib/Foswiki/UI/Sip.pm 0644 UI handler
+bin/sip 0644 new cgi script
+lib/Foswiki/Plugins/FreeswitchPlugin/Config.spec 0644 Congfig

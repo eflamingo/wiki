@@ -1,0 +1,3 @@
+Set
+ATTACHEDIMAGEFORMAT
+\n   * $comment: <br />\n     <img src="%ATTACHURLPATH%/$fileurl" alt="$filename" $size />

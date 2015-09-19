@@ -1,0 +1,5 @@
+---+!! AdminGroup
+Members of the AdminGroup can edit any page in the wiki.
+---+ Members
+%INCLUDE{"System.GroupInfo" GROUPNAME="%WEB%.%TOPIC%"}%
+

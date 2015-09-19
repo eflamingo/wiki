@@ -1,0 +1,3 @@
+Set
+CHANGEPASSWORDDISABLEDMESSAGE
+%MAKETEXT{"Resetting and setting password is not handled by Foswiki"}%

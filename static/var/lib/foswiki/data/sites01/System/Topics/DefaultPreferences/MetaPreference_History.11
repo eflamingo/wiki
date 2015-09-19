@@ -1,0 +1,3 @@
+Set
+WEBSUMMARY
+%IF{"defined SITEMAPWHAT" then="$percentSITEMAPWHAT$percent"}% %IF{"defined SITEMAPUSETO" then="$percentSITEMAPUSETO$percent"}%

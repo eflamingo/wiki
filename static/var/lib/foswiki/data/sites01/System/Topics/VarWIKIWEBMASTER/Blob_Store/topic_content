@@ -1,0 +1,8 @@
+
+
+#VarWIKIWEBMASTER
+---+++ WIKIWEBMASTER -- feedback email address for site
+   * Syntax: =%<nop>WIKIWEBMASTER%=
+   * Expands to: =%WIKIWEBMASTER%=
+   * Related: [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarWIKIWEBMASTERNAME][WIKIWEBMASTERNAME]]
+

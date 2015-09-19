@@ -1,0 +1,19 @@
+---+!! User Page
+%TOC%
+---+ Info
+You can change your information here.
+<form action='%SCRIPTURL{"accounts"}%/%BASEWEB%/%BASETOPIC%' name="savedFromTemplate" method="POST">
+  <input type="hidden" name="action" value="change_user_config" />
+| *Column* | *Input* | *Current Value* |
+| *First Name* | <input type="text" class="foswikiInputField" name="first_name"  size="40" value="" /> | %USERDETAIL{Field="FirstName"}% |
+| *Last Name* | <input type="text" class="foswikiInputField" name="last_name"  size="40" value="" /> | %USERDETAIL{Field="LastName"}% |
+| *New Login Name* | <input type="text" class="foswikiInputField" name="login_name"  size="40" value="" /> | %USERDETAIL{Field="LoginName"}% |
+| *Email* | <input type="text" class="foswikiInputField" name="email" size="40" value="" /> | %USERDETAIL{Field="Email"}% |
+| *Country:* | <select size="1" name="country"><option value="JPN">Japan</option><option value="USA">USA</option></select> | %USERDETAIL{Field="Country"}% |
+| *Call Back Number:* | <input type="text" class="foswikiInputField" name="callback_number" size="40" value="" /> | %USERDETAIL{Field="CallBackNumber"}% |
+
+| *Current Password*: <input type="password" name="mypassword" size="25"> | <input type="submit" value="Update"/ > |
+</form>
+
+---+ Group Memberships
+%SEARCH{" link_to.name = '%USERNAME%' AND link_to.type = 'MEMBER' AND info.web != 'Trash'"  type="query" nosearch="on" nototal="on" format="| [[$web.$topic]] |" header="| *Members Topic* |"}%

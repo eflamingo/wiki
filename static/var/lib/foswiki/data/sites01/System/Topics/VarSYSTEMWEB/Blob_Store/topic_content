@@ -1,0 +1,8 @@
+
+
+#VarSYSTEMWEB
+---+++ SYSTEMWEB -- name of documentation web
+   * The web containing all documentation and default [[%SYSTEMWEB%.PreferenceSettings][preference settings]]
+   * Syntax: =%<nop>SYSTEMWEB%=
+   * Expands to: =%SYSTEMWEB%=
+   * Related: [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarUSERSWEB][USERSWEB]]

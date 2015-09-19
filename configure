@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Going into perl"
+(cd perl && perl Makefile.PL PREFIX=/usr DESTDIR=${DESTDIR} )
+

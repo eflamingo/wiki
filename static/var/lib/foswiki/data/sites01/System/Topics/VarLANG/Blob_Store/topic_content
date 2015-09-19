@@ -1,0 +1,11 @@
+
+
+#VarLANG
+---+++ LANG -- the =lang= attribute of generated HTML pages
+   * In templates the =lang= attribute is defined like this:
+   <verbatim class="tml"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="%LANG%" lang="%LANG%"></verbatim>
+   * The value is read from [[%SCRIPTURLPATH{"configure"}%#Locale$Internationalisation][configure]] setting ={Site}{Locale}=
+   * Do not confuse =LANG= with [[System.VarLANGUAGE.TOPICKEY][LANGUAGE]]
+   * Syntax: =%<nop>LANG%=
+   * Expands to: =%LANG%= 
+<!--%JQREQUIRE{"chili"}%-->

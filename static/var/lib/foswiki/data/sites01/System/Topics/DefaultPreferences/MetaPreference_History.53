@@ -1,0 +1,3 @@
+Set
+INSTALLEDPLUGINS
+The INSTALLEDPLUGINS macro is no longer supported. You can set the Plugins execution order using the [[%SCRIPTURLPATH{"configure"}%][configure]] interface.

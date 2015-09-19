@@ -1,0 +1,4 @@
+data/System/FilterPlugin.txt 0644
+lib/Foswiki/Plugins/FilterPlugin/Core.pm 0644
+lib/Foswiki/Plugins/FilterPlugin.pm 0644
+pub/System/FilterPlugin/wikiringlogo40x40.png 0644

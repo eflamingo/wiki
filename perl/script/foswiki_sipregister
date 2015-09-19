@@ -1,0 +1,31 @@
+#!/usr/bin/perl -wT
+# See bottom of file for license and copyright information
+use strict;
+use warnings;
+
+use File::Spec;
+use FindBin qw( $Bin $Script );
+
+BEGIN {
+    if ( defined $ENV{GATEWAY_INTERFACE} || defined $ENV{MOD_PERL} ) {
+        $Foswiki::cfg{Engine} = 'Foswiki::Engine::CGI';
+        use CGI::Carp qw(fatalsToBrowser);
+        $SIG{__DIE__} = \&CGI::Carp::confess;
+    }
+    else {
+        $Foswiki::cfg{Engine} = 'Foswiki::Engine::CLI';
+        require Carp;
+        $SIG{__DIE__} = \&Carp::confess;
+    }
+    my @path = File::Spec->splitpath($Bin);
+    my $setlib = File::Spec->catfile( @path, 'setlib.cfg' );
+    require $setlib;
+    $Script =~ s/\..*$//;    # Remove optional file extension
+    $ENV{FOSWIKI_ACTION} = $Script;
+}
+
+use Foswiki     ();
+use Foswiki::UI ();
+$Foswiki::engine->run();
+__END__
+

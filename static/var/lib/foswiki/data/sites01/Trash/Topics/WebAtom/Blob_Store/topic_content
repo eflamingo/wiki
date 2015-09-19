@@ -1,0 +1,6 @@
+<title>%WIKITOOLNAME%'s <nop>%WEB% web</title>
+<subtitle><literal>%MAKETEXT{"The [_1] web of [_2]." args="<nop>%WEB%,<nop>%WIKITOOLNAME%"}% <nop>%WEBSUMMARY%</literal></subtitle>
+%INCLUDE{"System.WebAtomBase.TOPICKEY"}% <!--
+   * Set SKIN = rssatom
+   * Set COVER = rssatom
+-->

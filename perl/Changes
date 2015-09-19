@@ -1,0 +1,6 @@
+Revision history for Perl extension Foswiki.
+
+0.01  Fri Sep 18 17:40:02 2015
+	- original version; created by h2xs 1.23 with options
+		--omit-XS -n Foswiki
+

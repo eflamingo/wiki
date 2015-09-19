@@ -1,0 +1,19 @@
+%META:TOPICINFO{author="ProjectContributor" date="1181029824" format="1.1" reprev="1.1" version="$Rev$"}%
+%META:TOPICPARENT{name="ChecklistPlugin"}%
+#VarCHECKLISTEND
+---+++ CHECKLISTEND -- close a =%<nop>CHECKLISTSTART%= environment
+   * The =%<nop>CHECKLISTEND%= variable is handled by the ChecklistPlugin and have to be used with the [[VarCHECKLISTSTART][CHECKLISTSTART]] variable.
+   * Syntax: 
+     <verbatim>
+%CHECKLISTSTART%=
+     < bullet or order list >
+%CHECKLISTEND%=
+     </verbatim>
+   * Examples:
+     <verbatim>
+%CHECLISTSTART%
+   * item 1
+   * item 2
+%CHECKLISTEND%
+     </verbatim>
+   * Related: VarCHECKLIST, VarCHECKLISTSTART, VarCLI, ChecklistPlugin

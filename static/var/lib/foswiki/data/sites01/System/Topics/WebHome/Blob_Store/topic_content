@@ -1,0 +1,43 @@
+
+---+!! Welcome to the %WEB% Web
+This is where Foswiki keeps system documentation, including
+documentation that is included with optional extensions.
+
+For most people, the <nop>%SYSTEMWEB% web is read-only; even administrators should not
+need to modify any of the topics here, though you may want to add your own
+topics - for example, to answer frequently asked questions from your users.
+
+This site is running Foswiki version *%WIKIVERSION%*, Plugin API version *%PLUGINVERSION{}%*
+
+<div class="tipsOfTheDay">%INCLUDE{ "TipsOfTheDayInclude" warn="off" }%</div>
+
+---++ Presentations and tutorials
+   * [[System.MainFeatures.TOPICKEY][1 minute introduction]] - what is it?
+   * [[System.BeginnersStartHere.TOPICKEY][15 minute presentation]] - how do I use it?
+   * [[System.TwentyMinuteTutorial.TOPICKEY][20 minute walkthrough]] - please hold my hand.
+   * [[System.FrequentlyAskedQuestions.TOPICKEY][Frequently Asked Questions]]
+
+---++ Guides
+   * [[System.UsersGuide.TOPICKEY][User's Guide]] - links to documentation useful for normal users
+   * [[Reference Manual]] - full, detailed documentation
+   * [[http://foswiki.org/Support][Getting help]] - if you get stuck
+
+---++ Administrators (mostly)
+   * [[%SCRIPTURL{configure}%][configure]], the Foswiki configuration tool
+   * [[Admin Documentation Category]] has links to documentation for administrators
+   * [[System.AdminToolsCategory.TOPICKEY][Admin Tools]] - gateway to tools used by administrators
+   * [[System.ReleaseNotes01x01.TOPICKEY][Release Notes for 1.1]] - describes what's new in this release
+   * [[Instant Enhancements]] - some ideas for simple customisation of new installs
+
+---++ <nop>%WEB% Web Utilities
+   * [[System.WebTopicList.TOPICKEY][WebTopicList]] - all topics in alphabetical order
+   * [[System.WebChanges.TOPICKEY][WebChanges]] - recent topic changes in this web
+   * [[System.WebNotify.TOPICKEY][WebNotify]] - subscribe to an e-mail alert sent when topics change
+   * [[System.WebRss.TOPICKEY][WebRSS]], [[System.WebAtom.TOPICKEY][WebAtom]] - RSS and ATOM news feeds of topic changes
+   * [[System.WebStatistics.TOPICKEY][WebStatistics]] - listing popular topics and top contributors
+   * [[System.WebPreferences.TOPICKEY][WebPreferences]] - preferences of this web
+
+
+<a href="http://foswiki.org"><img src="%PUBURLPATH%/%WEB%/ProjectLogos/foswiki-badge.gif" alt="Foswiki badge" height="31" style="vertical-align:bottom" /></a> Foswiki is developed as Free Software under the [[System.FAQGnuGeneralPublicLicense.TOPICKEY][GNU/GPL]]. Get the latest version from [[System.Foswiki:Download.TOPICKEY][Foswiki.org downloads]].
+
+

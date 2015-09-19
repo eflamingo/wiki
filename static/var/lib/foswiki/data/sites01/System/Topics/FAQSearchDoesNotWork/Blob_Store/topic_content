@@ -1,0 +1,3 @@
+That is often an indication that <nop>%WIKITOOLNAME% can't find the =egrep= and =fgrep= commands on your system. Check the ={RCS}{EgrepCmd}= and ={RCS}{FgrepCmd}= settings in [[%SCRIPTURLPATH{"configure"}%][configure]].
+
+Attach FAQForm.

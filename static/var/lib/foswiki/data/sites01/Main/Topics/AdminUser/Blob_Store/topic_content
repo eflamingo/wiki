@@ -1,0 +1,12 @@
+---+ Wiki Administrator User
+
+This means it is no longer necessary to add yourself to the AdminGroup, and you will be able to quickly
+change to Admin User (and back to your user) only when you need to.
+
+Go to [[System.UserInfo.TOPICKEY][the User Info]] page to change your personal details.
+   
+---
+*Related topics:* [[%WIKIUSERSTOPIC%]], [[Main.AdminGroup.TOPICKEY]], [[Main.WikiGroups.TOPICKEY]], [[%SYSTEMWEB%.AccessControl][AccessControl]]
+
+
+

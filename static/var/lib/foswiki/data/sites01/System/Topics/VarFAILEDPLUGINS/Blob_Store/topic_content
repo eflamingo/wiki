@@ -1,0 +1,8 @@
+
+
+#VarFAILEDPLUGINS
+---+++ FAILEDPLUGINS -- debugging for plugins that failed to load, and handler list
+   * Syntax: =%<nop>FAILEDPLUGINS%=
+   * Expands to: See [[System.Plugins.TOPICKEY]]
+   * Related: [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarPLUGINDESCRIPTIONS][PLUGINDESCRIPTIONS]], [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarACTIVATEDPLUGINS][ACTIVATEDPLUGINS]], [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarPLUGINVERSION][PLUGINVERSION]]
+

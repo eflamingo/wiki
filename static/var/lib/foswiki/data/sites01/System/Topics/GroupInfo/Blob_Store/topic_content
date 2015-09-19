@@ -1,0 +1,2 @@
+%SEARCH{" link_from.name = '%GROUPNAME%' AND link_from.type = 'MEMBER' AND info.web != 'Trash'"  type="query" nosearch="on" nototal="on" format="| [[$web.$topic]] |" header="| *Members Topic* |"}%
+

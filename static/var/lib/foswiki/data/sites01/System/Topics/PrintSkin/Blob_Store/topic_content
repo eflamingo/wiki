@@ -1,0 +1,14 @@
+
+---+ Print Skin
+
+The print skin, used for printable pages with a small footer. Other skins, such as PatternSkin, may introduce their own print skin.
+
+This skin is part of every distribution.
+
+|  Description: | Useful to print pages with a small header and footer |
+|  Screenshot: | <a href="%ATTACHURL%/fullscreen.gif"><img src="%ATTACHURL%/screenshot.gif" alt="Click for full screen image" width="600" height="130" /></a> |
+|  Preview: | [[%SCRIPTURL{view}%/%WEB%/%TOPIC%?skin=print][Preview with this topic]] |
+|  Base Name: | print |
+
+
+

@@ -1,0 +1,3 @@
+---+!! Dial Plan EditTable Template
+
+%EDITTABLE{header="| *Order* | *Extension* | *Action* | *Target* | *Time* | *Extra* |" format="| row, -1 | text, 15 | select, 1, Call, Gateway, Transfer, VoiceMail | topic, 35 | select, 1, 15, 30, 60 | text, 40 |"}%

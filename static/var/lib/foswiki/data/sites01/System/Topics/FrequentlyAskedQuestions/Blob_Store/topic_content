@@ -1,0 +1,96 @@
+
+
+---+ Frequently Asked Questions
+
+This is a real FAQ, and also a demo of an easily implemented knowledge-base solution. You may view the code for the <a class="twistyExpandAll" href="#CreatorCode">topic creator</a> or [[%SCRIPTURLPATH{"view"}%/%WEB%/%TOPIC%?raw=on][raw text of the whole topic]] to see how it was done.
+%TWISTY{showlink="Summary of the pieces used..."}%
+   * [[System.FAQTemplate.TOPICKEY]] is used to populate new FAQ topics with their default content
+   * [[System.FAQForm.TOPICKEY]] is the [[System.DataForms.TOPICKEY]] definition used on the FAQ topics. Also implements autocomplete function for the !RelatedTopics field
+   * [[System.FAQViewTemplate.TOPICKEY]] controls how [[System.FAQForm.TOPICKEY]] topics look when viewed
+   * [[System.FAQEditTemplate.TOPICKEY]] controls how [[System.FAQForm.TOPICKEY]] topics look when edited
+   * [[System.AutoViewTemplatePlugin.TOPICKEY]] activates FAQViewTemplate and FAQEditTemplate for topics that have FAQForm attached to them
+   * [[System.JQueryWikiWord.TOPICKEY]] "wikifies" the free-text Title field into a valid WikiWord topic name, prefixed with FAQ
+   * [[System.JQueryTextboxList.TOPICKEY]] for autocomplete functionality on the !RelatedTopics field
+   * [[System.VarJQREQUIRE.TOPICKEY][JQREQUIRE]] activates jQuery javascript plugins in the browser
+   * [[System.VarADDTOZONE.TOPICKEY][ADDTOZONE]] inserts in-line javascript to the appropriate place in the rendered page
+   * [[System.VarURLPARAM.TOPICKEY][URLPARAM]] is used to relay the autocomplete request from the web browser into a part of a [[System.VarSEARCH.TOPICKEY][SEARCH]] query
+   * [[System.VarSEARCH.TOPICKEY][SEARCH]] On this topic, displays all topics with [[System.FAQForm.TOPICKEY]] attached that have !TopicClassification set to =FrequentlyAskedQuestion=. In the [[System.FAQForm.TOPICKEY]] topic, [[System.VarSEARCH.TOPICKEY][SEARCH]] generates the suggested list of topics for a given autocomplete request
+   * [[System.VarMAKETEXT.TOPICKEY][MAKETEXT]] will try to use a translation appropriate for the logged-in user's language preference for the string given to it
+   * [[System.VarINCLUDE.TOPICKEY][INCLUDE]] allows topics to re-use content from other topics
+   * [[System.VarSTARTSECTION.TOPICKEY][STARTSECTION]]/ENDSECTION allows [[System.VarINCLUDE.TOPICKEY][INCLUDE]] to include specific parts of a topic
+   * [[System.TwistyPlugin.TOPICKEY][TWISTY]] allows hidden content such as this
+---
+%ENDTWISTY%
+
+---++ List of FAQs
+<!-- This search looks in the %SYSTEMWEB% and Main for FAQ topics, which
+ are recognised because they have the form 'FAQForm' and are classified
+ as type 'FrequentlyAskedQuestion' -->
+%SEARCH{
+    "form.name~'*FAQForm'"
+    type="query"
+    excludetopic="FAQTemplate"
+    nonoise="on"
+    web="%SYSTEMWEB%,Main"
+    format="   * $formfield(TopicSummary) [[$web.$topic][Answer]]"
+    header="$n$n()FAQ topics found in [[$web.WebHome][$web]] web:$n$n"
+}%
+
+---++ More FAQs
+You can create your own local FAQ topics specific to your site. If you create your own FAQs, please consider sharing them at Foswiki:Support.FAQ so that your work may benefit others.
+
+%X% These topics are for frequently asked questions *including* answers. Do *not* use this to ask support questions!
+
+%TWISTY{
+ link="%BUTTON{"%MAKETEXT{"Create new FAQ topic"}%"
+  icon="add"
+  class="simple"}%%CLEAR%"
+ mode="div"
+}%
+<!-- This is the form that implements the FAQ creator -->
+<form action="%SCRIPTURLPATH{"edit"}%/Main/" id='newfaqform'>
+<input type="hidden" name="t" value="%GMTIME{"$epoch"}%" />
+<input type="hidden" name="onlywikiname" value="on" />
+<input type="hidden" name="onlynewtopic" value="on" />
+<input type="hidden" name="templatetopic" value="%SYSTEMWEB%.FAQTemplate" />
+<input type="hidden" name="formtemplate" value="%SYSTEMWEB%.FAQForm" />
+<input type="hidden" name="TopicClassification" value="FrequentlyAskedQuestion" />
+<input type="hidden" name="topic" class="jqWikiWord {source:'#faqsummary', prefix:'FAQ'}" />
+<input type="hidden" name="topicparent" value="%TOPIC%" />
+<div class="foswikiFormSteps">
+  <div class="foswikiFormStep">
+    <h2>Create a new FAQ topic</h2>
+  </div>
+  <div class="foswikiFormStep">
+    <h3>%MAKETEXT{"Title"}%:</h3>
+    <input type="text" class="foswikiInputField" id="faqsummary" name="TopicTitle" size="32" />
+    <div class="foswikiFormDescription foswikiGrayText">
+      Give this FAQ a descriptive title, e.g. "Explanation of ..." 
+    </div>
+  </div>
+  <div class="foswikiFormStep">
+    <h3>%MAKETEXT{"Question"}%:</h3>
+    <input type="text" class="foswikiInputField" id="faqsummary" name="TopicSummary" size="32" value="" />
+    <div class="foswikiFormDescription foswikiGrayText">
+      Summarize your question in a few simple words, e.g. "I did this ..., how do I ..."
+    </div>
+  </div>
+  <div class="foswikiFormStep foswikiFormButtons">
+    %BUTTON{"%MAKETEXT{"Submit"}%" icon="tick" type="submit"}%
+    %CLEAR%
+  </div>
+</div>
+</form>
+%ENDTWISTY%
+%JQREQUIRE{"wikiword"}%
+
+---++ More sources...
+
+Other places where you can find answers to your questions:
+
+   * More FAQs are available at Foswiki:Support.FAQ
+   * CompleteDocumentation: All you need to know to install and configure Foswiki
+   * TwentyMinuteTutorial: Get a jump start on using this wiki 
+   * GoodStyle: Things to consider when changing text
+   * WikiSyntax, TextFormattingRules: A quick one-two guide to Foswiki shorthand basics
+   * If you can't find an answer, ask a question - post it in the Foswiki:Support web, or ask on IRC at irc://irc.freenode.net/foswiki

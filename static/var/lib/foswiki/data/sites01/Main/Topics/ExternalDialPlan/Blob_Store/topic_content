@@ -1,0 +1,5 @@
+---+!! External Dialplan
+This is a sample external dialplan.  You should change it as soon as you procure a number.
+%EDITTABLE{include="System.PhoneDialPlanTable"}%
+| *Order* | *Extension* | *Action* | *Target* | *Time* | *Extra* |
+| 1 | 14446668888 | Call | Main.AdminUser | 10 | |

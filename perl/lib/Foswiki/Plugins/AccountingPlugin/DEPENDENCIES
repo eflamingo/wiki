@@ -1,0 +1,4 @@
+Time::ParseDate,>=2003.0211,cpan,Required. Available from the CPAN archive.
+Foswiki::Contrib::JSCalendarContrib,>=0.961,perl,Optional, used if installed. Used to display a neat calendar popup when editing actions. Available from the Foswiki:Extensions/JSCalendarContrib repository.
+Foswiki::Plugins::JQueryPlugin,>=0,perl,Required, used for the action editor.
+JSON,>=0,cpan,Required. Available from the CPAN archive.

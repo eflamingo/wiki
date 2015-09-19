@@ -1,0 +1,3 @@
+%EDITTABLE{include="System.PhoneDialPlanTable"}%
+| *Order* | *Extension* | *Action* | *Target* | *Time* | *Extra* |
+| 1 | 2001 | Call | Main.AdminUser | 30 | |

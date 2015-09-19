@@ -1,0 +1,8 @@
+
+
+#VarPLUGINDESCRIPTIONS
+---+++ PLUGINDESCRIPTIONS -- list of plugin descriptions
+   * Syntax: =%<nop>PLUGINDESCRIPTIONS%=
+   * Expands to: %PLUGINDESCRIPTIONS%
+   * Related: [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarACTIVATEDPLUGINS][ACTIVATEDPLUGINS]], [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarFAILEDPLUGINS][FAILEDPLUGINS]], [[%IF{"'%INCLUDINGTOPIC%'='Macros'" then="#"}%VarPLUGINVERSION][PLUGINVERSION]]
+

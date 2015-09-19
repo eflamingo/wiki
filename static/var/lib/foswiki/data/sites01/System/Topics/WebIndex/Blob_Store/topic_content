@@ -1,0 +1,5 @@
+
+
+%SEARCH{"'1'" scope="topic" type="query" nosearch="on"}%
+
+%MAKETEXT{"See also the faster [_1]" args="[[%BASEWEB%.WebTopicList][WebTopicList]]"}%

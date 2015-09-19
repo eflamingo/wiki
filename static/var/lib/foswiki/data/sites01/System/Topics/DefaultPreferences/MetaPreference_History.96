@@ -1,0 +1,3 @@
+Set
+ADMINLOGIN
+%IF{"{LoginManager} = 'Foswiki::LoginManager::ApacheLogin' AND NOT context authenticated"

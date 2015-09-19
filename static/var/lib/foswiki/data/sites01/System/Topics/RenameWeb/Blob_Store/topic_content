@@ -1,0 +1,4 @@
+
+
+   * <a href="%SCRIPTURLPATH{"rename"}%/%BASEWEB%/%BASETOPIC%?action=renameweb" rel='nofollow'>
+   %MAKETEXT{"Rename, move or delete this web"}%</a>

@@ -1,0 +1,66 @@
+
+
+---+ A List of User Documentation
+
+   $ [[System.AccessKeys.TOPICKEY]] : Access keys are keyboard shortcuts which allow the user to navigate around a website or a piece of computer software without having to use a mouse or other pointing device
+   $ [[System.ACRONYM.TOPICKEY]] : An acronym is an abbreviation that is typically made up of the first letter or letters of a phrase. An acronym of 3 or more letters will be automatically linked only if a topic of that name already exists in the Web
+   $ [[System.BeginnersStartHere.TOPICKEY]] : This is a short introductory training course for Foswiki beginners
+   $ [[System.DataForms.TOPICKEY]] : Data forms allow you to add structured data to topics. The data stored in the form fields can be used to search and filter topics. The combination of structured data and search queries are the base for building database applications
+   $ [[System.FAQDeleteOrRenameAnAttachment.TOPICKEY]] : How to delete or rename a file attachment
+   $ [[System.FAQDeleteOrRenameATopic.TOPICKEY]] : How to delete or rename a topic
+   $ [[System.DocumentGraphics.TOPICKEY]] : This is a Foswiki icon library. The graphics can be used in topics and by web applications
+   $ [[System.FAQEditDoesNotIncreaseTheRevision.TOPICKEY]] : Explanation why editing and saving a topic does not always increase the revision
+   $ [[System.EditTablePlugin.TOPICKEY]] : Edit tables using edit fields, date pickers and drop down boxes
+   $ [[System.FileAttachment.TOPICKEY]] : Each topic can have one or more files of any type attached to it by using the Attach screen to upload (or download) files from your local PC.
+   $ [[System.FileAttribute.TOPICKEY]] : Description of the hidden attribute for file attachments
+   $ [[System.ForceNewRevision.TOPICKEY]] : The "Force new revision" checkbox is a way to force a separate new revision when you save even if you make subsequent edits within a one hour period.  
+   $ [[System.FormattedSearch.TOPICKEY]] : Foswiki's inline search feature allows flexible formatting of search result. This is a key feature for most Foswiki applications
+   $ [[System.FormatTokens.TOPICKEY]] : Description of the format tokens such as $n, $quot, $percent etc used in [[System.FormattedSearch.TOPICKEY]] and a few other macros.
+   $ [[System.FrequentlyAskedQuestions.TOPICKEY]] : A list of frequently asked questions about the use of Foswiki
+   $ [[System.GlossaryOfTerms.TOPICKEY]] : Definitions of common Foswiki terms like web, topic, data form, templates, macros, preferences etc
+   $ [[System.GoBox.TOPICKEY]] : Description of the box at the top or sidebar of each page, also called Jump box.
+   $ [[System.GoodStyle.TOPICKEY]] : List of hints and recommendations that are considered basic knowledge when starting to edit existing topics
+   $ [[System.HiddenAttachment.TOPICKEY]] : How to hide/unhide file attachments in normal topic view
+   $ [[System.IncludeTopicsAndWebPages.TOPICKEY]] : Include Topics and Web Pages Using =%<nop>INCLUDE{...}%= Macro
+   $ [[System.InstalledPlugins.TOPICKEY]] : List of the plugins currently installed and enabled in this Foswiki site. Users will find links to all the user documentation for each plugin
+   $ [[System.InterwikiPlugin.TOPICKEY]] : This plugin links =ExternalSite:Page= text to external sites based on aliases defined in the [[System.InterWikis.TOPICKEY]]  topic
+   $ [[System.LoginName.TOPICKEY]] : Explanation of the term login name
+   $ [[System.Macros.TOPICKEY]] : An explanation of the term Macro and a list of most the Macros defined on this Foswiki
+   $ [[System.MacrosQuickStart.TOPICKEY]] : Short introduction to Macros
+   $ [[System.MainFeatures.TOPICKEY]] : A brief list of the main features of Foswiki with links how to learn more
+   $ [[System.ManagingTopics.TOPICKEY]] : How to rename, move, copy, and delete individual topics
+   $ [[System.ManagingWebs.TOPICKEY]] : An introduction to webs. Includes the tool for the administrator to add new webs
+   $ [[System.PreferenceSettings.TOPICKEY]] : Introduction to preference settings. Ie. Macros defined in topics that can be used site wide, per web or in a single topic
+   $ [[System.QuerySearch.TOPICKEY]] : Query searches help you search the contents of forms attached to your topics, as well as the values of other meta-data attached to the topic using simple query language
+   $ [[System.QuietSave.TOPICKEY]] : Short explanation of the term Quiet Save
+   $ [[System.ReferenceManual.TOPICKEY]] : Documentation for webmasters, system administrators, project managers, team leaders, and all other users of Foswiki 
+   $ [[System.RegularExpression.TOPICKEY]] : A short introduction to regular expressions
+   $ [[System.SearchHelp.TOPICKEY]] : An introduction to searching
+   $ [[System.SearchPatternCookbook.TOPICKEY]] : A cookbook with many examples how to use the powerful SEARCH feature in wiki applications. See examples of both regular expression searches, query searches, and the use of formatted output
+   $ [[System.ShortcutMacros.TOPICKEY]] : A list of macros that can be used as shortcuts for longer sequences of characters, to either save typing or to easily allow line breaks in format strings and the like
+   $ [[System.FAQSimultaneousEdits.TOPICKEY]] : Description of what happens if two users try to edit the same topic simultaneously
+   $ [[System.SmiliesPlugin.TOPICKEY]] : Smilies are common in e-mail messages and bulletin board posts. They are used to convey an emotion, such as a smile :<nop>-) or a frown :<nop>-( . This plugin automatically converts certain smilies to a nice small icon. This topic lists the smilies supported
+   $ [[System.SpreadSheetPlugin.TOPICKEY]] : Foswiki Spreadsheet Plugin adds spreadsheet capabilities to Foswiki topics and many functions for manipulating numbers and text. See this topic for a full list of all the many functions in the CALC Macro
+   $ [[System.TablePlugin.TOPICKEY]] : Table plugin enables control of the formatting of table incl column widths, styles, sorting etc.
+   $ [[System.TextFormattingRules.TOPICKEY]] : A complete table of all the text formatting rules
+   $ [[System.TimeSpecifications.TOPICKEY]] : Time formats recognised by Foswiki
+   $ [[System.TinyMCEFrequentlyAskedQuestions.TOPICKEY]] : Frequently Asked Questions about the Tiny MCE WYSIWYG editor
+   $ [[System.TinyMCEPlugin.TOPICKEY]] : Description of the Tiny MCE Editor which is the WYSIWYG Editor of Foswiki
+   $ [[System.TopicsAndWebs.TOPICKEY]] : An introduction to topics and webs
+   $ [[System.TwentyMinuteTutorial.TOPICKEY]] : A compact, 20-minute primer
+   $ [[System.UserSetting.TOPICKEY]] : How each user can alter settings that affect the use and looks of Foswiki
+   $ [[System.UsersGuide.TOPICKEY]] : The main entry page for the basic user documentation
+   $ [[System.UsingHTML.TOPICKEY]] : How to use HTML in topics
+   $ [[System.WebLeftBarCookbook.TOPICKEY]] : Instructions and tips how to use personal left bars
+   $ [[System.WelcomeGuest.TOPICKEY]] : A short introduction to a Foswiki based website
+   $ [[System.FAQWhatIsWikiWiki.TOPICKEY]] : An explanation of this !WikiWiki thing
+   $ [[System.WikiCulture.TOPICKEY]] : Wiki - culture, concepts and principles
+   $ [[System.WikiName.TOPICKEY]] : An introduction to the term WikiName
+   $ [[System.WikiSyntax.TOPICKEY]] : Easy to learn rules for editing text
+   $ [[System.WikiWord.TOPICKEY]] : Explanation of the term WikiWord
+
+---++ Related Topics
+   $ [[System.AdminDocumentationCategory.TOPICKEY]] : List of documents relevant for the installer and administrator of the Foswiki installation
+   $ [[System.AdminToolsCategory.TOPICKEY]] : List of tools available to the Foswiki administrator
+   $ [[System.DeveloperDocumentationCategory.TOPICKEY]] : List of documents for application developers as well as developers of skins and extensions.
+   $ [[System.UserToolsCategory.TOPICKEY]] :  List of tools the user may need for setting and resetting passwords, changing email address etc.
