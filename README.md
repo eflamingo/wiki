@@ -13,12 +13,14 @@ To see the SQL statements, just grep the DBIStoreContrib directory for this stri
 
 
 To start with, take a look at [the Meta Topic object](https://github.com/favioflamingo/wiki/blob/master/perl/lib/Foswiki/Meta.pm).  To create a brand new object, the user enters the following information:
+
 1. WebName - must correspond to an existing Web
 1. TopicName - the combination of (WebName,TopicName) must be unique at the time when _$metatopic->save_ is run
 1. content 
 1. other stuff - FormData, etc.. talked about later in the plugin section
 
 While the user sees the above information, what the user does not see or ever need to know is that when a brand new topic is created, a random UUID (a 32 byte number) has to be created to represent the new topic.  Further more, while a (WebName,TopicName) may uniquely identify a single topic at a single point in time, that pair is not capable of identifying a topic uniquely over time.  And when normalizing a data set and separating structure, it is necessary to be able to identify all topics uniquely across time.  So, in that case, we could just use (WebName,TopicName, timestamp) to identify a topic.  However, it is much easier to just create random UUID and use that to identify a topic.  Therefore the following two SQL tables were created:
+
 * Topics:
 ```sql
 CREATE TABLE wiki."Topics"
